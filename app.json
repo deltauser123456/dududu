@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "HUNTER",
+    "slug": "hunter-location-game",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "HUNTER uses your location only while you are actively playing and have chosen to share it with your room."
+      }
+    },
+    "android": {
+      "package": "com.dududu.hunter",
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"],
+      "config": {
+        "googleMaps": {
+          "apiKey": "${GOOGLE_MAPS_API_KEY}"
+        }
+      }
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow HUNTER to use your location during an active game when you choose to share it."
+        }
+      ],
+      "react-native-maps"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "REPLACE_WITH_EAS_PROJECT_ID"
+      }
+    }
+  }
+}
