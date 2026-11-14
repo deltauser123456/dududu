@@ -28,7 +28,7 @@ const makeRoom = () => Math.floor(100000 + Math.random() * 900000).toString();
 // Round coordinates to roughly 100m cells before they leave this phone.
 // HUNTER never broadcasts a player's exact GPS coordinates.
 function blurCoordinate(value: number) {
-  return Math.round(value * 100) / 1000;
+  return Math.round(value * 1000) / 1000;
 }
 
 export default function App() {
